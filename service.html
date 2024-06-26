@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>革新的採用サービス - IDEAL RECRUIT</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;700&family=Poppins:wght@300;400;700&display=swap');
+        
+        :root {
+            --primary-blue: #0052cc;
+            --primary-red: #ff3366;
+            --neutral-bg: #f0f4f8;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+        }
+        
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--neutral-bg);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            padding: 1rem 0;
+            background: rgba(240, 244, 248, 0.9);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .nav-logo {
+            font-family: 'Poppins', sans-serif;
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav ul li {
+            margin-left: 2rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: color 0.3s ease;
+        }
+        .nav a:hover, .nav a.active {
+            color: var(--primary-red);
+        }
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            color: var(--text-light);
+            padding: 150px 0 100px;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 1rem;
+            animation: fadeInUp 1s ease-out;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto 2rem;
+            animation: fadeInUp 1s ease-out 0.5s backwards;
+        }
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .services-container {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 2rem;
+        }
+        .service-card {
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+            overflow: hidden;
+            transition: all 0.3s ease;
+            margin-bottom: 3rem;
+        }
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0,0,0,0.2);
+        }
+        .service-content {
+            padding: 2rem;
+        }
+        .service-title {
+            color: var(--primary-blue);
+            font-size: 2rem;
+            margin-bottom: 1rem;
+        }
+        .service-description {
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+        .service-benefits {
+            background: var(--neutral-bg);
+            padding: 1.5rem;
+            border-radius: 10px;
+            margin-bottom: 1.5rem;
+        }
+        .service-benefits h3 {
+            color: var(--primary-red);
+            margin-bottom: 1rem;
+        }
+        .service-benefits ul {
+            list-style-type: none;
+            padding-left: 0;
+        }
+        .service-benefits li {
+            margin-bottom: 0.5rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+        .service-benefits li::before {
+            content: '✓';
+            color: var(--primary-red);
+            position: absolute;
+            left: 0;
+        }
+        .process-timeline {
+            margin-top: 2rem;
+        }
+        .process-step {
+            display: flex;
+            margin-bottom: 1.5rem;
+            align-items: flex-start;
+        }
+        .step-number {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            margin-right: 1rem;
+            flex-shrink: 0;
+        }
+        .step-content {
+            flex-grow: 1;
+        }
+        .step-title {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+        .cta-button {
+            display: inline-block;
+            padding: 1rem 2rem;
+            background: var(--primary-red);
+            color: var(--text-light);
+            text-decoration: none;
+            border-radius: 30px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            margin-top: 1rem;
+        }
+        .cta-button:hover {
+            background: var(--primary-blue);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">IDEAL RECRUIT</a>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="#" class="active">サービス</a></li>
+                <li><a href="about.html">会社概要</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="hero-content">
+            <h1>革新的採用サービス</h1>
+            <p>理想の人材を見つけ、貴社の成長を加速させる4つの専門サービスをご提供します</p>
+        </div>
+    </section>
+
+    <div class="services-container">
+        <div class="service-card">
+            <div class="service-content">
+                <h2 class="service-title">1. 採用分析</h2>
+                <p class="service-description">社内優秀層から逆算した理想の採用を実現します。「仕事にあった人を起用する。」弊社の採用分析事業では、社内で評価が高く活躍している理想的な社員の採用をサポートします。</p>
+                
+                <div class="service-benefits">
+                    <h3>採用分析によるメリット</h3>
+                    <ul>
+                        <li>入社後に活躍できる人材の採用</li>
+                        <li>人事評価を数値化し、評価に基づく配属</li>
+                        <li>社風や会社の文化にあった人が入社する</li>
+                    </ul>
+                </div>
+
+                <div class="process-timeline">
+                    <h3>採用スケジュール</h3>
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">事実確認</div>
+                            <p>貴社で活躍する人材の行動特性を洗い出し。貴社にて入力していただくシートと、現地orWebでのインタビューを行います。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">ペルソナ設計</div>
+                            <p>自社優秀層群を発見し、優秀層のポテンシャル、コンピテンシーを把握。採用ターゲットを明確にします。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            <div class="step-title">ブランディング</div>
+                            <p>採用ターゲットに合わせた採用戦略を立案します。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">4</div>
+                        <div class="step-content">
+                            <div class="step-title">選考</div>
+                            <p>応募者対応、採用面接についても、弊社でサポートいたします。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">5</div>
+                        <div class="step-content">
+                            <div class="step-title">入社</div>
+                            <p>理想の社員から逆算した、採用により、「活躍できる社員」が入社いたします。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <a href="#contact" class="cta-button">採用分析について相談する</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-content">
+                <h2 class="service-title">2. RPO（採用代行）</h2>
+                <p class="service-description">フルカスタマイズ可能な採用業務代行サービスを提供します。これまで、数多くの企業に対し、採用支援を実施した採用のプロが御社の採用プロセスを代行します。</p>
+                
+                <div class="service-benefits">
+                    <h3>RPOサービスの特徴</h3>
+                    <ul>
+                        <li>スカウト送信の代行</li>
+                        <li>求職者対応・書類選考代行</li>
+                        <li>面接代行、面接同席</li>
+                        <li>入社後のフォロー</li>
+                        <li>媒体運用</li>
+                        <li>求人原稿・求人記事作成</li>
+                    </ul>
+                </div>
+
+                <p>御社に必要な項目だけを適正価格で実施します。「応募は来るんだけど、面接は苦手」「媒体のスカウトの設定だけした欲しい」など、御社の悩みをお聞かせくださいませ。</p>
+
+                <a href="#contact" class="cta-button">RPOサービスについて相談する</a>
+            </div>
+        </div>
+
+        <div class="service-card">
+            <div class="service-content">
+                <h2 class="service-title">3. 成果報酬型採用代行</h2>
+                <p class="service-description">Indeed、Airwork、engageなどの求人媒体を活用し、成功報酬型の採用パッケージをご提案いたします。初期費用0円で採用できた分だけの料金なので、リスクが少ない採用を始められます。</p>
+                
+                <div class="service-benefits">
+                    <h3>成果報酬型採用のメリット</h3>
+                    <ul>
+                        <li>採用数に応じた課金形態</li>
+                        <li>リスクを最小限に抑えた採用活動</li>
+                        <li>効果的な求人原稿作成</li>
+                        <li>複数の無料媒体を活用した広範な求人掲載</li>
+                    </ul>
+                </div>
+
+                <div class="process-timeline">
+                    <h3>採用プロセス</h3>
+                    <div class="process-step">
+                        <div class="step-number">1</div>
+                        <div class="step-content">
+                            <div class="step-title">採用ペルソナ確認</div>
+                            <p>お打ち合わせの際に、採用ターゲットや選考基準についてお伺いします。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">2</div>
+                        <div class="step-content">
+                            <div class="step-title">求人原稿の作成</div>
+                            <p>Indeedのアルゴリズムや勝ち筋を完全に把握したスタッフが作成いたします。</p>
+                        </div>
+                    </div>
+                    <div class="process-step">
+                        <div class="step-number">3</div>
+                        <div class="step-content">
+                            
