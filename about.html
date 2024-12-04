@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>会社概要 - IDEAL RECRUIT</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <style>
+        :root {
+            --primary-blue: #0052cc;
+            --primary-red: #ff3366;
+            --neutral-bg: #f0f4f8;
+            --text-dark: #333333;
+            --text-light: #ffffff;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            font-family: 'Noto Sans JP', sans-serif;
+            background-color: var(--neutral-bg);
+            color: var(--text-dark);
+        }
+
+        .nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+        }
+        .nav-logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-blue);
+            text-decoration: none;
+        }
+        .nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        .nav ul li {
+            margin-left: 2rem;
+        }
+        .nav a {
+            text-decoration: none;
+            color: var(--text-dark);
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+        .nav a:hover, .nav a.active {
+            color: var(--primary-red);
+        }
+
+        .hero {
+            background: linear-gradient(135deg, var(--primary-blue), var(--primary-red));
+            color: var(--text-light);
+            text-align: center;
+            padding: 100px 0 50px;
+        }
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .section {
+            padding: 80px 0;
+        }
+        .section-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        .section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 2rem;
+            color: var(--primary-blue);
+        }
+        .company-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+        .info-item {
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+        }
+        .info-item h3 {
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-blue);
+        }
+        .info-item p {
+            margin: 0;
+            line-height: 1.8;
+        }
+
+        .team-section {
+            margin-top: 4rem;
+        }
+        .team-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 2rem;
+            justify-content: center;
+        }
+        .team-member {
+            text-align: center;
+            background: #ffffff;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            width: 250px;
+        }
+        .team-member img {
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            margin-bottom: 1rem;
+        }
+        .team-member h4 {
+            font-size: 1.2rem;
+            margin-bottom: 0.5rem;
+            color: var(--primary-blue);
+        }
+        .team-member p {
+            margin: 0;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            background: var(--primary-blue);
+            color: var(--text-light);
+            text-align: center;
+            padding: 2rem 0;
+        }
+    </style>
+</head>
+<body>
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">IDEAL RECRUIT</a>
+            <ul>
+                <li><a href="index.html">ホーム</a></li>
+                <li><a href="service.html">サービス</a></li>
+                <li><a href="about.html" class="active">会社概要</a></li>
+                <li><a href="contact.html">お問い合わせ</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <section class="hero">
+        <div class="section-container">
+            <h1>会社概要</h1>
+            <p>革新的な人材採用ソリューションで未来を切り拓く。</p>
+        </div>
+    </section>
+
+    <section class="section">
+        <div class="section-container">
+            <h2>会社情報</h2>
+            <div class="company-info">
+                <div class="info-item">
+                    <h3>会社名</h3>
+                    <p>株式会社 IDEAL RECRUIT</p>
+                </div>
+                <div class="info-item">
+                    <h3>設立</h3>
+                    <p>2020年4月</p>
+                </div>
+                <div class="info-item">
+                    <h3>所在地</h3>
+                    <p>東京都新宿区XXXX-XX</p>
+                </div>
+                <div class="info-item">
+                    <h3>事業内容</h3>
+                    <p>採用分析、RPOサービス、成果報酬型採用、その他採用支援</p>
+                </div>
+            </div>
+
+            <div class="team-section">
+                <h2>私たちのチーム</h2>
+                <div class="team-container">
+                    <div class="team-member">
+                        <img src="img/member1.jpg" alt="CEO">
+                        <h4>田中 太郎</h4>
+                        <p>代表取締役 CEO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/member2.jpg" alt="CTO">
+                        <h4>佐藤 花子</h4>
+                        <p>CTO</p>
+                    </div>
+                    <div class="team-member">
+                        <img src="img/member3.jpg" alt="Manager">
+                        <h4>鈴木 一郎</h4>
+                        <p>採用マネージャー</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 IDEAL RECRUIT. All rights reserved.</p>
+    </footer>
+</body>
+</html>
